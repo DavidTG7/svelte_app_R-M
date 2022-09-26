@@ -1,4 +1,6 @@
 <script>
+  import Character from "./lib/Character.svelte";
+
   let characters = [];
   let page = 1;
   const loadCharacters = async () => {
@@ -22,19 +24,17 @@
   };
 </script>
 
-<h1>Rick and Morty Svelte</h1>
+<h1 class="title">Rick and Morty Svelte</h1>
 
-<div>
-  <button on:click={prevPage} disabled={page === 1}>Previous</button>
-  <button on:click={nextPage} disabled={page === 42}>Next</button>
-</div>
 
-<div>
-  {#each characters as character}
-    <div>
-      <img src={character.image} alt={character.name} />
-      <h2>{character.name}</h2>
-      <h3>{character.species}</h3>
-    </div>
-  {/each}
+<div class="container">
+  <div class="btns">
+    <button on:click={prevPage} disabled={page === 1}>Previous</button>
+    <button on:click={nextPage} disabled={page === 42}>Next</button>
+  </div>
+  <div class="grid">
+    {#each characters as character}
+      <Character {character} />
+    {/each}
+  </div>
 </div>

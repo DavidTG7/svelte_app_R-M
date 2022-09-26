@@ -1,0 +1,75 @@
+body {
+  font-family: Verdana, sans-serif;
+  background: #202020;
+  color: #fff;
+}
+
+.btns {
+  max-width: 100%;
+  display: flex;
+  justify-content: center;
+}
+
+button {
+  width: 12rem;
+  height: 3.5rem;
+  margin: 1rem;
+  font-size: 2rem;
+  border-radius: 10px;
+  background: rgb(255, 212, 133);
+  font-weight: bold;
+  margin-bottom: 1rem;
+}
+
+@media screen and (max-width: 730px) {
+  button {
+    width: 8rem;
+    height: 2.5rem;
+    font-size: 1.5rem;
+  }
+}
+
+button:hover {
+  color: #fff;
+  background: rgb(158, 131, 80);
+}
+
+button:disabled {
+  cursor: not-allowed;
+  background: rgb(243, 101, 101);
+  color: #31312a;
+}
+
+h2 {
+  max-width: fit-content;
+  margin: 10px auto;
+}
+
+.title {
+  font-size: 2.7rem;
+  font-weight: bolder;
+  text-align: center;
+}
+
+.container {
+  padding: 2rem;
+  max-width: 100%;
+  margin: auto;
+}
+
+.grid {
+  display: flex;
+  gap: 2rem;
+  flex-flow: row wrap;
+  justify-content: center;
+}
+
+.character {
+  background: #31312a;
+  text-align: center;
+  border-radius: 0 0 10px 10px;
+}
+
+.character img {
+  border-radius: 10px 10px 0 0;
+}
